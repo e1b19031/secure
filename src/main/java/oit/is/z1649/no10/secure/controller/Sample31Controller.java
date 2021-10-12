@@ -42,4 +42,20 @@ public class Sample31Controller {
     return "sample33.html";
   }
 
+  /**
+   * POSTを受け付ける場合は@PostMappingを利用する /sample25へのPOSTを受け付けて，FormParamで指定された変数(input
+   * name)をsample25()メソッドの引数として受け取ることができる
+   *
+   * @param hiku1
+   * @param hiku2
+   * @param model
+   * @return
+   */
+  @PostMapping("step6")
+  public String sample37(@RequestParam Integer hiku1, @RequestParam Integer hiku2, ModelMap model) {
+    int hikuResult = hiku1 - hiku2;
+    model.addAttribute("hikukekka", hikuResult);
+    return "sample33.html";
+  }
+
 }
