@@ -23,7 +23,7 @@ public class Sample31Controller {
   public String sample31() {
     return "sample31.html";
   }
-  
+
 /**
    *
    * @param model Thymeleafにわたすデータを保持するオブジェクト
@@ -35,5 +35,10 @@ public class Sample31Controller {
     String loginUser = prin.getName(); // ログインユーザ情報
     model.addAttribute("login_user", loginUser);
     return "sample31.html";
+  }
+
+   @GetMapping("step3")
+  public String sample33() {
+    return "sample33.html";
   }
 }
